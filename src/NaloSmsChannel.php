@@ -42,11 +42,11 @@ class NaloSmsChannel
 
             // dd($message->toArray());
             
-            Http::post(static::DEFAULT_SMS_URL, $message->toArray())->throw()->json();
+            $response = Http::post(static::DEFAULT_SMS_URL, $message->toArray())->throw()->json();
 
-            // if($response['status'] != "ACCEPTED"){
-            //     throw CouldNotSendNotification::serviceRespondedWithAnError($response['reason']);
-            // }
+            if(@$response['status'] != "1701"){
+                throw CouldNotSendNotification::serviceRespondedWithAnError($response['message']);
+            }
 
         } catch (RequestException $requestException) {
             throw CouldNotSendNotification::serviceRespondedWithAnError($requestException);

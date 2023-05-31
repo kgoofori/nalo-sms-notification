@@ -10,7 +10,7 @@ use NotificationChannels\NaloSms\Exceptions\CouldNotSendNotification;
 
 class NaloSmsChannel
 {
-    const DEFAULT_SMS_URL = 'https://sms.nalosolutions.com/smsbackend/Nal_resl/send-message';
+    const DEFAULT_SMS_URL = 'https://sms.nalosolutions.com/smsbackend/Nal_resl/send-message/';
 
     /**
      * Send the given notification.

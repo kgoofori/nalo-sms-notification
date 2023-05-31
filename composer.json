@@ -1,0 +1,27 @@
+{
+    "name": "kgoofori/nalo-sms-notification",
+    "description": "This package makes it easy to send SMS notifications using Nalo Solutions SMS API the laravel way",
+    "homepage": "https://github.com/kgoofori/nalo-sms-notification.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gideon Ofori",
+            "email": "kgoofori@gmail.com",
+            "homepage": "https://github.com/kgoofori/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.0",
+        "illuminate/notifications": "^5.8 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 ",
+        "illuminate/support": "^5.8 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\NaloSms\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
